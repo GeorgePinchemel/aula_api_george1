@@ -7,10 +7,12 @@ import jakarta.persistence.Id
 import jakarta.persistence.Table
 
 @Entity
-@Table(name = "Products")
-data class Product(
+@Table(name = "Suppliers")
+data class Supplier(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
-    val name: String
+    val id: Long,
+    val name: String,
+    val cnpj: String,
+    val contact: String
 )

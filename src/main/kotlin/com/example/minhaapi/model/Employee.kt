@@ -7,10 +7,12 @@ import jakarta.persistence.Id
 import jakarta.persistence.Table
 
 @Entity
-@Table(name = "Products")
-data class Product(
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
-    val name: String
+@Table(name = "Employees")
+data class Employee(
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+val id: Long,
+val name: String,
+val role: String,
+val salary: Double
 )

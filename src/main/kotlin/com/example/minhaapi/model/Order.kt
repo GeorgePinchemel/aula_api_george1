@@ -5,12 +5,15 @@ import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 import jakarta.persistence.Table
+import java.util.*
 
 @Entity
-@Table(name = "Products")
-data class Product(
+@Table(name = "Orders")
+data class Order(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
-    val name: String
+    val id: Long,
+    val customerId: Long,
+    val date: Date,
+    val total: Double
 )
